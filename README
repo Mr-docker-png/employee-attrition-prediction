@@ -1,0 +1,210 @@
+# Employee Attrition Prediction using Logistic Regression
+
+## Project Overview
+
+This Machine Learning project predicts whether an employee is likely to leave a company based on workplace, demographic, and job-related factors.
+
+The project uses Logistic Regression to identify employees who are at risk of attrition, helping organizations improve employee retention strategies.
+
+---
+
+## Business Problem
+
+Employee turnover can be expensive due to recruitment, onboarding, and training costs.
+
+Organizations can use predictive analytics to identify employees who may leave the company and take proactive steps to improve retention.
+
+The goal of this project is to predict:
+
+Attrition
+
+* 0 = Employee Stays
+* 1 = Employee Leaves
+
+---
+
+## Dataset Information
+
+### Dataset
+
+IBM HR Analytics Employee Attrition Dataset
+
+### Total Records
+
+1470 Employees
+
+### Target Variable
+
+Attrition
+
+* No = 0
+* Yes = 1
+
+### Features
+
+Examples:
+
+* Age
+* BusinessTravel
+* Department
+* Education
+* EducationField
+* Gender
+* JobRole
+* MaritalStatus
+* MonthlyIncome
+* OverTime
+* YearsAtCompany
+* JobSatisfaction
+
+---
+
+## Data Preprocessing
+
+### Missing Values
+
+No missing values were found in the dataset.
+
+### Removed Columns
+
+The following columns were removed because they contained no useful predictive information:
+
+* EmployeeNumber
+* EmployeeCount
+* Over18
+* StandardHours
+
+### Encoding
+
+Categorical columns were converted into numerical values using One-Hot Encoding.
+
+Examples:
+
+* BusinessTravel
+* Department
+* EducationField
+* Gender
+* JobRole
+* MaritalStatus
+* OverTime
+
+### Feature Scaling
+
+StandardScaler was applied to normalize feature values before training.
+
+---
+
+## Machine Learning Workflow
+
+1. Load Dataset
+2. Explore Dataset
+3. Data Cleaning
+4. Feature Selection
+5. One-Hot Encoding
+6. Train-Test Split
+7. Feature Scaling
+8. Train Logistic Regression Model
+9. Generate Predictions
+10. Evaluate Model Performance
+
+---
+
+## Model Used
+
+### Logistic Regression
+
+Logistic Regression predicts the probability of an employee leaving the company.
+
+Reasons for choosing Logistic Regression:
+
+* Suitable for binary classification
+* Produces probability outputs
+* Easy to interpret
+* Fast training and prediction
+
+---
+
+## Model Performance
+
+### Accuracy
+
+87.76%
+
+### Confusion Matrix
+
+```text
+[[241 14]
+ [22 17]]
+```
+
+### Classification Report
+
+| Metric    | Stay (0) | Leave (1) |
+| --------- | -------- | --------- |
+| Precision | 0.92     | 0.55      |
+| Recall    | 0.95     | 0.44      |
+| F1 Score  | 0.93     | 0.49      |
+
+---
+
+## Results Interpretation
+
+The model performs well at identifying employees who stay with the company.
+
+However, it struggles to identify all employees who leave, achieving a recall of 44% for attrition cases.
+
+This demonstrates why accuracy alone is not sufficient when working with imbalanced datasets.
+
+---
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Scikit-Learn
+
+---
+
+## Key Learnings
+
+Through this project, I learned:
+
+* Binary Classification
+* Logistic Regression
+* One-Hot Encoding
+* Feature Scaling
+* Confusion Matrix Analysis
+* Precision
+* Recall
+* F1 Score
+* Employee Analytics
+* Model Evaluation
+
+---
+
+## Future Improvements
+
+* Random Forest Classification
+* XGBoost
+* Hyperparameter Tuning
+* Class Weight Balancing
+* SMOTE Oversampling
+* Streamlit Employee Attrition Predictor
+
+---
+
+## Real-World Applications
+
+* Human Resource Analytics
+* Employee Retention
+* Workforce Planning
+* Employee Risk Analysis
+* Talent Management
+
+---
+
+## Conclusion
+
+This project demonstrates how Logistic Regression can be used to predict employee attrition using HR analytics data. The model achieved an accuracy of 87.76% while providing valuable insights into employee retention and turnover patterns.
